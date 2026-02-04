@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Falegnameria Crosina - Artigianato in Legno</title>
+    <meta name="description" content="Falegnameria Crosina - Produzione artigianale di arredi urbani, strutture in legno e realizzazioni su misura. Qualità e tradizione dal Trentino.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        forest: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            200: '#bbf7d0',
+                            300: '#86efac',
+                            400: '#4ade80',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                        },
+                        wood: {
+                            100: '#fef3e2',
+                            200: '#fde4ba',
+                            300: '#f5d4a1',
+                            400: '#d4a574',
+                            500: '#b8860b',
+                            600: '#8b6914',
+                            700: '#6b4f12',
+                            800: '#4a3610',
+                            900: '#2d1f09',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(22, 101, 52, 0.9) 0%, rgba(20, 83, 45, 0.85) 100%);
+        }
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center">
+                    <img src="assets/img/logo.png" alt="Falegnameria Crosina" class="h-12">
+                </a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#chi-siamo" class="text-gray-700 hover:text-forest-700 font-medium transition-colors">Chi Siamo</a>
+                    <a href="#prodotti" class="text-gray-700 hover:text-forest-700 font-medium transition-colors">Prodotti</a>
+                    <a href="contatti.html" class="text-gray-700 hover:text-forest-700 font-medium transition-colors">Contatti</a>
+                </div>
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-md text-gray-700 hover:text-forest-700">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-4 py-3 space-y-2">
+                <a href="#chi-siamo" class="block py-2 text-gray-700 hover:text-forest-700">Chi Siamo</a>
+                <a href="#prodotti" class="block py-2 text-gray-700 hover:text-forest-700">Prodotti</a>
+                <a href="contatti.html" class="block py-2 text-gray-700 hover:text-forest-700">Contatti</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center">
+        <div class="absolute inset-0">
+            <img src="assets/img/hero.jpg" alt="Realizzazioni Falegnameria Crosina" class="w-full h-full object-cover">
+            <div class="hero-gradient absolute inset-0"></div>
+        </div>
+        <div class="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Falegnameria Crosina</h1>
+            <p class="text-xl md:text-2xl mb-4 text-forest-100">Artigianato in legno dal 1957</p>
+            <p class="text-lg md:text-xl mb-10 text-white/90 italic">"Il legno non soltanto come materia, ma come elemento naturale condizionante del modo di vivere, di abitare, di abbellire e di creare"</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#prodotti" class="bg-white text-forest-800 px-8 py-4 rounded-lg font-semibold hover:bg-forest-50 transition-colors">
+                    Scopri i Prodotti
+                </a>
+                <a href="contatti.html" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
+                    Contattaci
+                </a>
+            </div>
+        </div>
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Chi Siamo Section -->
+    <section id="chi-siamo" class="py-20 bg-wood-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-forest-900 mb-6">La Nostra Storia</h2>
+                    <div class="w-20 h-1 bg-forest-600 mb-8"></div>
+                    <p class="text-gray-700 text-lg mb-6 leading-relaxed">
+                        La storia di <strong>CROSINA</strong> coincide con la storia di una famiglia che dal <strong>1957</strong> produce, ininterrottamente, un'estesa linea di arredamenti e mobili in legno massiccio per esterno ed interno seguendo le esigenze del cliente in modo tradizionale, classico e moderno.
+                    </p>
+                    <p class="text-gray-700 text-lg mb-6 leading-relaxed">
+                        I nostri prodotti sono il frutto artigianale associato all'esperienza nella selezione e lavorazione del legno, le cui caratteristiche "difetti" migliorano nel tempo la bellezza degli arredi e rendono l'unicita del pezzo. Panchine, gruppi arredo, grigliati, pavimenti, pergole, casette multifunzionali, carport, staccionate, cancelli, tabelle direzionali, bacheche, rivestimenti, poggioli, serramenti, scale, travi lamellari curve per carpenterie e piccole costruzioni, nonche realizzazioni di spazi espositivi didattici.
+                    </p>
+                    <p class="text-gray-700 text-lg mb-6 leading-relaxed">
+                        <strong>Larice o pino</strong>, al naturale o trattato sono i legni da noi principalmente utilizzati. Oltre ai vari articoli di serie, vi offriamo la possibilita di concretizzare la vostra idea, il vostro sogno, con <strong>realizzazioni personalizzate</strong>.
+                    </p>
+                    <div class="mt-8 flex items-center gap-4">
+                        <img src="assets/img/logo.png" alt="Certificazione PEFC" class="h-16">
+                        <span class="text-forest-700 font-medium">Legno certificato PEFC</span>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="assets/img/laboratorio.jpg" alt="Laboratorio Falegnameria Crosina" class="rounded-2xl shadow-xl">
+                    <div class="absolute -bottom-6 -right-6 bg-forest-700 text-white p-6 rounded-xl shadow-lg hidden md:block">
+                        <p class="text-3xl font-bold">1957</p>
+                        <p class="text-forest-100">Anno di fondazione</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Qualità Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-forest-900 mb-4">Qualita e Certificazioni</h2>
+                <div class="w-20 h-1 bg-forest-600 mx-auto mb-6"></div>
+                <p class="text-gray-600 text-lg max-w-3xl mx-auto">
+                    Il rispetto dell'ambiente e la nostra prima preoccupazione. I nostri prodotti sono certificati PEFC, associazione che garantisce l'utilizzo di materiale proveniente da foreste gestite in maniera sostenibile.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- PEFC -->
+                <a href="https://aziende.pefc.it/aziende_online/scheda?ID=423" target="_blank" rel="noopener" class="bg-forest-50 rounded-xl p-8 text-center hover:shadow-lg transition-shadow block">
+                    <div class="bg-white w-24 h-24 rounded-xl flex items-center justify-center mx-auto mb-6 p-3">
+                        <img src="assets/img/logo-pefc.png" alt="Certificazione PEFC" class="max-w-full max-h-full object-contain">
+                    </div>
+                    <h3 class="font-bold text-forest-900 text-xl mb-3">Certificazione PEFC</h3>
+                    <p class="text-gray-600">Legno proveniente da foreste gestite in maniera sostenibile e responsabile</p>
+                    <span class="inline-block mt-3 text-forest-700 text-sm font-medium">Vedi certificazione →</span>
+                </a>
+                <!-- RAL -->
+                <div class="bg-forest-50 rounded-xl p-8 text-center">
+                    <div class="bg-white w-24 h-24 rounded-xl flex items-center justify-center mx-auto mb-6 p-3">
+                        <img src="assets/img/logo-ral.jpg" alt="Marchio RAL" class="max-w-full max-h-full object-contain">
+                    </div>
+                    <h3 class="font-bold text-forest-900 text-xl mb-3">Marchio RAL</h3>
+                    <p class="text-gray-600">Impregnazione in autoclave con sali atossici secondo le norme dell'Istituto Tedesco</p>
+                </div>
+                <!-- ECO -->
+                <div class="bg-forest-50 rounded-xl p-8 text-center">
+                    <div class="bg-forest-100 w-24 h-24 rounded-xl flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-12 h-12 text-forest-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-forest-900 text-xl mb-3">Prodotti ECO</h3>
+                    <p class="text-gray-600">Trattamento protettivo e verniciatura esclusivamente con prodotti ecologici</p>
+                </div>
+            </div>
+            <div class="mt-12 bg-wood-100 rounded-xl p-8">
+                <p class="text-gray-700 text-center text-lg leading-relaxed">
+                    Il nostro <strong>servizio di consulenza</strong> assicura assistenza post vendita con manutenzioni e riparazioni in modo rapido, fidato e flessibile.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prodotti Section -->
+    <section id="prodotti" class="py-20 bg-forest-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-forest-900 mb-4">I Nostri Prodotti</h2>
+                <div class="w-20 h-1 bg-forest-600 mx-auto mb-6"></div>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                    Realizziamo un'ampia gamma di prodotti in legno per arredi urbani, giardini e spazi pubblici
+                </p>
+            </div>
+
+            <!-- Product Categories Grid -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- Panchine -->
+                <div class="card-hover bg-forest-50 rounded-xl overflow-hidden shadow-md">
+                    <img src="assets/img/panchina.jpg" alt="Panchine in legno" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h3 class="font-bold text-forest-900 text-lg">Panchine</h3>
+                        <p class="text-gray-600 text-sm mt-2">Panchine per parchi, giardini e spazi pubblici</p>
+                    </div>
+                </div>
+
+                <!-- Fioriere -->
+                <div class="card-hover bg-forest-50 rounded-xl overflow-hidden shadow-md">
+                    <img src="assets/img/fioriera.jpg" alt="Fioriera in legno" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h3 class="font-bold text-forest-900 text-lg">Fioriere</h3>
+                        <p class="text-gray-600 text-sm mt-2">Fioriere decorative per arredo urbano</p>
+                    </div>
+                </div>
+
+                <!-- Cestini -->
+                <div class="card-hover bg-forest-50 rounded-xl overflow-hidden shadow-md">
+                    <img src="assets/img/cestino.jpg" alt="Cestini in legno" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h3 class="font-bold text-forest-900 text-lg">Cestini</h3>
+                        <p class="text-gray-600 text-sm mt-2">Cestini portarifiuti per spazi pubblici</p>
+                    </div>
+                </div>
+
+                <!-- Pergolati -->
+                <div class="card-hover bg-forest-50 rounded-xl overflow-hidden shadow-md">
+                    <img src="assets/img/pergola.jpg" alt="Pergolati in legno" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h3 class="font-bold text-forest-900 text-lg">Pergolati</h3>
+                        <p class="text-gray-600 text-sm mt-2">Pergole e strutture ombreggianti</p>
+                    </div>
+                </div>
+
+                <!-- Grigliati -->
+                <div class="card-hover bg-forest-50 rounded-xl overflow-hidden shadow-md">
+                    <img src="assets/img/grigliato.jpg" alt="Grigliati in legno" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h3 class="font-bold text-forest-900 text-lg">Grigliati</h3>
+                        <p class="text-gray-600 text-sm mt-2">Pannelli grigliati decorativi</p>
+                    </div>
+                </div>
+
+                <!-- Isole Ecologiche -->
+                <div class="card-hover bg-forest-50 rounded-xl overflow-hidden shadow-md">
+                    <img src="assets/img/isola-ecologica.JPG" alt="Isola ecologica in legno" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h3 class="font-bold text-forest-900 text-lg">Isole Ecologiche</h3>
+                        <p class="text-gray-600 text-sm mt-2">Contenitori per raccolta differenziata</p>
+                    </div>
+                </div>
+
+                <!-- Carport -->
+                <div class="card-hover bg-forest-50 rounded-xl overflow-hidden shadow-md">
+                    <img src="assets/img/carport.jpg" alt="Carport in legno" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h3 class="font-bold text-forest-900 text-lg">Carport</h3>
+                        <p class="text-gray-600 text-sm mt-2">Tettoie per auto in legno</p>
+                    </div>
+                </div>
+
+                <!-- Gazebi -->
+                <div class="card-hover bg-forest-50 rounded-xl overflow-hidden shadow-md">
+                    <img src="assets/img/gazebo.jpg" alt="Gazebi in legno" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h3 class="font-bold text-forest-900 text-lg">Gazebi</h3>
+                        <p class="text-gray-600 text-sm mt-2">Gazebi e chioschi in legno</p>
+                    </div>
+                </div>
+
+                <!-- Piccole Costruzioni -->
+                <div class="card-hover bg-forest-50 rounded-xl overflow-hidden shadow-md">
+                    <img src="assets/img/casetta.jpg" alt="Piccole costruzioni in legno" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h3 class="font-bold text-forest-900 text-lg">Piccole Costruzioni</h3>
+                        <p class="text-gray-600 text-sm mt-2">Casette, depositi e ricoveri</p>
+                    </div>
+                </div>
+
+                <!-- Staccionate -->
+                <div class="card-hover bg-forest-50 rounded-xl overflow-hidden shadow-md">
+                    <img src="assets/img/staccionata.jpg" alt="Staccionate in legno" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h3 class="font-bold text-forest-900 text-lg">Staccionate</h3>
+                        <p class="text-gray-600 text-sm mt-2">Recinzioni e staccionate in legno</p>
+                    </div>
+                </div>
+
+                <!-- Bacheche -->
+                <div class="card-hover bg-forest-50 rounded-xl overflow-hidden shadow-md">
+                    <img src="assets/img/bacheca.jpg" alt="Bacheca in legno" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h3 class="font-bold text-forest-900 text-lg">Bacheche</h3>
+                        <p class="text-gray-600 text-sm mt-2">Bacheche informative da esterno</p>
+                    </div>
+                </div>
+
+                <!-- Tabelle Direzionali -->
+                <div class="card-hover bg-forest-50 rounded-xl overflow-hidden shadow-md">
+                    <img src="assets/img/tabella-direzionale.JPG" alt="Tabella direzionale in legno" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h3 class="font-bold text-forest-900 text-lg">Tabelle Direzionali</h3>
+                        <p class="text-gray-600 text-sm mt-2">Segnaletica e indicazioni in legno</p>
+                    </div>
+                </div>
+
+                <!-- Pontili Galleggianti -->
+                <div class="card-hover bg-forest-50 rounded-xl overflow-hidden shadow-md">
+                    <img src="assets/img/pontile-galleggiante.JPG" alt="Pontile galleggiante in legno" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h3 class="font-bold text-forest-900 text-lg">Pontili Galleggianti</h3>
+                        <p class="text-gray-600 text-sm mt-2">Pontili e passerelle per laghi e fiumi</p>
+                    </div>
+                </div>
+
+                <!-- Altalene e Giochi -->
+                <div class="card-hover bg-forest-50 rounded-xl overflow-hidden shadow-md">
+                    <img src="assets/img/altalena.jpg" alt="Altalene e giochi in legno" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h3 class="font-bold text-forest-900 text-lg">Altalene e Giochi</h3>
+                        <p class="text-gray-600 text-sm mt-2">Giochi a molla e strutture ludiche</p>
+                    </div>
+                </div>
+
+                <!-- Realizzazioni Personalizzate -->
+                <div class="card-hover bg-gradient-to-br from-forest-600 to-forest-800 rounded-xl overflow-hidden shadow-md text-white">
+                    <div class="p-8 h-full flex flex-col justify-center">
+                        <svg class="w-16 h-16 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"/>
+                        </svg>
+                        <h3 class="font-bold text-xl mb-2">Su Misura</h3>
+                        <p class="text-forest-100 text-sm">Realizziamo progetti personalizzati secondo le tue esigenze</p>
+                        <a href="contatti.html" class="mt-4 inline-flex items-center text-white font-medium hover:underline">
+                            Richiedi un preventivo
+                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Preview -->
+    <section class="py-20 bg-forest-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Le Nostre Realizzazioni</h2>
+                <p class="text-forest-200 text-lg">Alcuni esempi dei nostri lavori</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <img src="assets/img/pergola.jpg" alt="Realizzazione 1" class="rounded-lg w-full h-40 md:h-56 object-cover hover:opacity-90 transition-opacity">
+                <img src="assets/img/gazebo.jpg" alt="Realizzazione 2" class="rounded-lg w-full h-40 md:h-56 object-cover hover:opacity-90 transition-opacity">
+                <img src="assets/img/casetta.jpg" alt="Realizzazione 3" class="rounded-lg w-full h-40 md:h-56 object-cover hover:opacity-90 transition-opacity">
+                <img src="assets/img/grigliato.jpg" alt="Realizzazione 4" class="rounded-lg w-full h-40 md:h-56 object-cover hover:opacity-90 transition-opacity">
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-wood-100">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-forest-900 mb-6">Hai un progetto in mente?</h2>
+            <p class="text-gray-700 text-lg mb-8">
+                Contattaci per un preventivo gratuito. Realizziamo progetti su misura per privati ed enti pubblici.
+            </p>
+            <a href="contatti.html" class="inline-block bg-forest-700 text-white px-8 py-4 rounded-lg font-semibold hover:bg-forest-800 transition-colors">
+                Richiedi un Preventivo
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-forest-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <img src="assets/img/logo.png" alt="Falegnameria Crosina" class="h-12 mb-4 bg-white rounded px-2 py-1">
+                    <p class="text-forest-200">Artigianato in legno di qualita dal Trentino. Certificazione PEFC per il rispetto dell'ambiente.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Link Utili</h4>
+                    <ul class="space-y-2 text-forest-200">
+                        <li><a href="#chi-siamo" class="hover:text-white transition-colors">Chi Siamo</a></li>
+                        <li><a href="#prodotti" class="hover:text-white transition-colors">Prodotti</a></li>
+                        <li><a href="contatti.html" class="hover:text-white transition-colors">Contatti</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Contatti</h4>
+                    <ul class="space-y-2 text-forest-200">
+                        <li>Via Alla Sega, 9 - 38067 Ledro (TN)</li>
+                        <li>Tel: <a href="tel:+390464594160" class="hover:text-white">0464 594160</a></li>
+                        <li>Email: <a href="mailto:info@crosina.it" class="hover:text-white">info@crosina.it</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-forest-700 mt-8 pt-8 text-center text-forest-300">
+                <p>&copy; 2025 Falegnameria Crosina. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

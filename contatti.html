@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatti - Falegnameria Crosina</title>
+    <meta name="description" content="Contatta la Falegnameria Crosina per preventivi e informazioni sui nostri prodotti artigianali in legno.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        forest: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            200: '#bbf7d0',
+                            300: '#86efac',
+                            400: '#4ade80',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                        },
+                        wood: {
+                            100: '#fef3e2',
+                            200: '#fde4ba',
+                            300: '#f5d4a1',
+                            400: '#d4a574',
+                            500: '#b8860b',
+                            600: '#8b6914',
+                            700: '#6b4f12',
+                            800: '#4a3610',
+                            900: '#2d1f09',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans antialiased bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center">
+                    <img src="assets/img/logo.png" alt="Falegnameria Crosina" class="h-12">
+                </a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html#chi-siamo" class="text-gray-700 hover:text-forest-700 font-medium transition-colors">Chi Siamo</a>
+                    <a href="index.html#prodotti" class="text-gray-700 hover:text-forest-700 font-medium transition-colors">Prodotti</a>
+                    <a href="contatti.html" class="text-forest-700 font-medium">Contatti</a>
+                </div>
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-md text-gray-700 hover:text-forest-700">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-4 py-3 space-y-2">
+                <a href="index.html#chi-siamo" class="block py-2 text-gray-700 hover:text-forest-700">Chi Siamo</a>
+                <a href="index.html#prodotti" class="block py-2 text-gray-700 hover:text-forest-700">Prodotti</a>
+                <a href="contatti.html" class="block py-2 text-forest-700 font-medium">Contatti</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="pt-32 pb-16 bg-forest-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Contattaci</h1>
+            <p class="text-forest-200 text-lg max-w-2xl mx-auto">
+                Siamo a tua disposizione per preventivi, informazioni e consulenze sui nostri prodotti artigianali
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="py-16">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl font-bold text-forest-900 mb-8 text-center">Informazioni di Contatto</h2>
+
+            <!-- Contact Cards -->
+            <div class="grid sm:grid-cols-2 gap-6">
+                <!-- Address -->
+                <div class="bg-white rounded-xl p-6 shadow-md flex items-start gap-4">
+                    <div class="bg-forest-100 p-3 rounded-lg">
+                        <svg class="w-6 h-6 text-forest-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-forest-900 mb-1">Indirizzo</h3>
+                        <p class="text-gray-600">Via Alla Sega, 9</p>
+                        <p class="text-gray-600">38067 Ledro (TN)</p>
+                    </div>
+                </div>
+
+                <!-- Phone -->
+                <div class="bg-white rounded-xl p-6 shadow-md flex items-start gap-4">
+                    <div class="bg-forest-100 p-3 rounded-lg">
+                        <svg class="w-6 h-6 text-forest-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-forest-900 mb-1">Telefono</h3>
+                        <p class="text-gray-600">
+                            <a href="tel:+390464594160" class="hover:text-forest-700 transition-colors">0464 594160</a>
+                        </p>
+                        <p class="text-gray-500 text-sm mt-1">Lun-Ven: 08:00-12:00 / 14:00-18:00</p>
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div class="bg-white rounded-xl p-6 shadow-md flex items-start gap-4">
+                    <div class="bg-forest-100 p-3 rounded-lg">
+                        <svg class="w-6 h-6 text-forest-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-forest-900 mb-1">Email</h3>
+                        <p class="text-gray-600">
+                            <a href="mailto:info@crosina.it" class="hover:text-forest-700 transition-colors">info@crosina.it</a>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Hours -->
+                <div class="bg-white rounded-xl p-6 shadow-md flex items-start gap-4">
+                    <div class="bg-forest-100 p-3 rounded-lg">
+                        <svg class="w-6 h-6 text-forest-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-forest-900 mb-1">Orari di Apertura</h3>
+                        <div class="text-gray-600 space-y-1">
+                            <p><span class="font-medium">Lun - Ven:</span> 08:00-12:00 / 14:00-18:00</p>
+                            <p><span class="font-medium">Sab - Dom:</span> Chiuso</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl font-bold text-forest-900 mb-8 text-center">Dove Siamo</h2>
+            <div class="rounded-xl overflow-hidden shadow-lg">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d694.2099973595074!2d10.681774160489663!3d45.8945132353982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47823c8ec4fb9abb%3A0x5766be8640d83f29!2sCrosina%20sas!5e0!3m2!1sit!2sit!4v1770235314714!5m2!1sit!2sit"
+                    width="100%"
+                    height="400"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-forest-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <img src="assets/img/logo.png" alt="Falegnameria Crosina" class="h-12 mb-4 bg-white rounded px-2 py-1">
+                    <p class="text-forest-200">Artigianato in legno di qualita dal Trentino. Certificazione PEFC per il rispetto dell'ambiente.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Link Utili</h4>
+                    <ul class="space-y-2 text-forest-200">
+                        <li><a href="index.html#chi-siamo" class="hover:text-white transition-colors">Chi Siamo</a></li>
+                        <li><a href="index.html#prodotti" class="hover:text-white transition-colors">Prodotti</a></li>
+                        <li><a href="contatti.html" class="hover:text-white transition-colors">Contatti</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Contatti</h4>
+                    <ul class="space-y-2 text-forest-200">
+                        <li>Via Alla Sega, 9 - 38067 Ledro (TN)</li>
+                        <li>Tel: <a href="tel:+390464594160" class="hover:text-white">0464 594160</a></li>
+                        <li>Email: <a href="mailto:info@crosina.it" class="hover:text-white">info@crosina.it</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-forest-700 mt-8 pt-8 text-center text-forest-300">
+                <p>&copy; 2025 Falegnameria Crosina. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
